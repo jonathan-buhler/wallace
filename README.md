@@ -9,7 +9,7 @@ Wallace likes being on your Desktop so that it's easier to find him
 Once this folder has been moved to the Desktop, open up the Terminal (should be in your Applications folder) and enter the following lines one at a time
 
 ```bash
-cd Desktop/wallace  # Navigates to folder
+cd Desktop  # Navigates to Desktop
 bash install.sh     # Runs installation script (takes a couple minutes)
 ```
 
