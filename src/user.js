@@ -24,7 +24,9 @@ async function createUser() {
     ];
     console.clear();
     let response = await prompts(questions);
-    fs.mkdirSync("./.data");
+    if (!fs.existsSync("./.data/")) {
+        fs.mkdirSync("./.data");
+    }
     fs.writeFileSync("./.data/user.json", JSON.stringify(response));
     return response;
 }

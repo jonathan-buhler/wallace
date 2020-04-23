@@ -95,8 +95,5 @@ typings/
 # Build folder
 dist/
 
-# Wallace .zip
-wallace.zip
-
 # Data directory
 .data/

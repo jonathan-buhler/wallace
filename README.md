@@ -21,7 +21,7 @@ Also don't worry if no characters show up while typing, that's just how password
 
 ## Usage
 
-To start Wallace, while inside the **`wallace`** folder run
+To start Wallace, while inside the **`wallace`** folder type
 
 ```bash
 yarn spin
@@ -31,13 +31,14 @@ Wallace will now check for slots once every minute until you tell him not to
 
 To stop Wallace, type press the `control` key and the `c` key concurrently
 
-If you've closed the Terminal and need to get back to the **`wallace`** folder simply run
+If you've closed the Terminal and need to get back to the **`wallace`** folder simply type
 
 ```bash
 cd Desktop/wallace
 ```
 
-If you've inputted the wrong email or password you can reset Wallace by running
+If you've inputted the wrong email or password you can reset Wallace by typing
+
 ```bash
 yarn reset
 ```
