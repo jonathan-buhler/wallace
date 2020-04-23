@@ -97,3 +97,6 @@ dist/
 
 # Wallace .zip
 wallace.zip
+
+# Data directory
+.data/

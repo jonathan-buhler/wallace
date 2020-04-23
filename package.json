@@ -6,6 +6,7 @@
     "author": "Jonathan Buhler <benedict.buhler@gmail.com>",
     "license": "GPL-3.0",
     "private": true,
+    "proxy": "http://localhost:8080",
     "dependencies": {
         "chalk": "^4.0.0",
         "lodash": "^4.17.15",
@@ -16,6 +17,7 @@
         "puppeteer": "^2.1.1"
     },
     "devDependencies": {
+        "@vue/component-compiler-utils": "^3.1.2",
         "prettier": "^2.0.4"
     },
     "prettier": {
@@ -23,6 +25,8 @@
         "printWidth": 120
     },
     "scripts": {
-        "spin": "node -e 'require(\"./wallace\").spin()'"
+        "spin": "node -e 'require(\"./src/server\").serve()'",
+        "reset": "node -e 'require(\"./src/user\").clearUser()'",
+        "update": "git pull"
     }
 }
