@@ -5,7 +5,7 @@ let chalk = require("chalk");
 
 async function serve() {
     let w = new Wallace();
-    await w.build();
+    await w.boot();
     await w.checkAvailability();
     let spinner = ora("Reading Moby Dick and waiting for the next run").start();
     cron.schedule("* * * * *", async () => {
