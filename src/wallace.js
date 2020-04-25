@@ -39,6 +39,7 @@ class Wallace {
         if (availableSlots.length === 0) {
             console.log(chalk.red("Wallace is sad to report that there are presently no slots available"));
         } else {
+            process.stdout.write("\x07\x07\x07");
             for (let slot of availableSlots) {
                 console.log(
                     chalk.green(
