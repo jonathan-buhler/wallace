@@ -28,7 +28,7 @@
     "scripts": {
         "spin": "node -e 'require(\"./src/server\").serve()'",
         "reset": "node -e 'require(\"./src/user\").clearUser()'",
-        "upgrade": "git pull && yarn install"
+        "update": "git pull && yarn install"
     },
     "husky": {
         "hooks": {
