@@ -27,7 +27,8 @@
     },
     "scripts": {
         "spin": "node -e 'require(\"./src/server\").serve()'",
-        "reset": "node -e 'require(\"./src/user\").clearUser()'",
+        "addAccount": "node -e 'require(\"./src/accountHandler\").addAccount()'",
+        "clear": "node -e 'require(\"./src/accountHandler\").clearAccounts()'",
         "update": "git pull && yarn install"
     },
     "husky": {

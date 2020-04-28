@@ -1,6 +1,7 @@
-let { getUser } = require("./user");
+let { getAccount } = require("./accountHandler");
 let puppeteer = require("puppeteer");
 let chalk = require("chalk");
+let ora = require("ora");
 
 class BrowserHandler {
     constructor() {}
@@ -14,15 +15,18 @@ class BrowserHandler {
         });
     }
 
-    async logIn(user) {
+    async logIn(account) {
+        let spinner = ora("Logging in").start();
         await this.page.goto("https://secure.tesco.com/account/en-GB/login");
-        await this.page.type("#username", user.email);
-        await this.page.type("#password", user.password);
+        await this.page.type("#username", account.email);
+        await this.page.type("#password", account.password);
         await Promise.all([this.page.waitForNavigation(), this.page.click("#sign-in-form > button")]);
         if (this.page.url() != "https://www.tesco.com/") {
+            spinner.stop();
             console.log(chalk.red("Login error, try resetting Wallace"));
             process.exit(1);
         }
+        spinner.stop();
     }
 
     async lookUp(query) {
@@ -36,7 +40,7 @@ class BrowserHandler {
 
     async build() {
         await this.startBrowser();
-        await this.logIn(await getUser());
+        await this.logIn(await getAccount());
     }
 }
 

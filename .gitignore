@@ -95,5 +95,5 @@ typings/
 # Build folder
 dist/
 
-# Data directory
-.data/
+# Accounts file
+accounts.json

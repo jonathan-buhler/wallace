@@ -7,7 +7,9 @@ async function serve() {
     let w = new Wallace();
     await w.boot();
     await w.checkAvailability();
-    let spinner = ora("Reading Moby Dick and waiting for the next run").start();
+    let spinner = ora(
+        "Reading Moby Dick and waiting for the next run " + chalk.dim("(Press 'ctrl+c' to quit)")
+    ).start();
     cron.schedule("* * * * *", async () => {
         spinner.stop();
         await w.checkAvailability();
